@@ -1,2 +1,2 @@
-.vim/tmp/
-.vim/backup
+.vim/**
+!.vim/bundle/
