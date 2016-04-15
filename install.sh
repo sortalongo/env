@@ -2,6 +2,12 @@
 
 DIR=$(dirname ${BASH_SOURCE[0]})
 
+pushd $DIR
+
+git submodule update --recursive --init
+
+popd
+
 echo linking .bashrc
 ln -s $DIR/.bashrc ~/.bashrc
 echo linking .vimrc
