@@ -18,6 +18,9 @@ mkdir $DIR/.vim/tmp $DIR/.vim/backup
 echo installing plugins
 echo $(vim +PluginInstall +qall >/dev/null && echo success || echo failure)
 
+echo linking .xmonad
+ln -s $DIR/.xmonad ~/.xmonad
+
 echo linking zshrc
 ln -s $DIR/.zshrc ~/.zshrc
 echo linking oh-my-zsh
