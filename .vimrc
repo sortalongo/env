@@ -79,11 +79,14 @@ call vundle#end()            " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+"------ Google {
 if filereadable('/usr/share/vim/google/default.vim')
   source /usr/share/vim/google/magic.vim
   Glug youcompleteme-google
   Glug corpweb plugin[mappings]
 endif
+"------ Google }
+
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -252,7 +255,7 @@ noremap <leader>ww :set wrap!<cr>
 "------ Control }
 
 "------ Google {
-nnoremap <leader>cs :execute ":!google-chrome --new-window https://cs.corp.google.com\\#%:p:s?.*./google3/?google3/?\\&l=" . line('.')<CR> <CR>
+nnoremap <unique> <leader>cs :CorpWebCs<Space>
 "------ Google }
 
 "----Mappings }
