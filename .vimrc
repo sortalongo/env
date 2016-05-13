@@ -57,17 +57,19 @@ let g:rainbow_conf = {
 \}
 "----RainbowParens }
 
+"----Colors {
+Plugin 'flazz/vim-colorschemes'
+"----Colors }
+
 "----Airline {
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='badwolf'
 "----Airline }
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
 " Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -77,8 +79,22 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+if filereadable('/usr/share/vim/google/default.vim')
+  source /usr/share/vim/google/magic.vim
+  Glug youcompleteme-google
+  Glug corpweb plugin[mappings]
+endif
+
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+
 
 "{{{Misc Settings
+
+" colors
+set t_Co=256
+colorscheme badwolf
 
 " Turn on that syntax highlighting
 syntax on
@@ -163,10 +179,6 @@ let mapleader = " "
 
 "------ Navigation {
 
-" cd to the directory containing the file in the buffer
-noremap <silent> <leader>cd :lcd %:h<CR>
-noremap <silent> <leader>cr :lcd <c-r>=FindGitDirOrRoot()<cr><cr>
-
 " create directory for current file
 noremap <silent> <leader>md :!mkdir -p %:p:h<CR>
 
@@ -187,12 +199,12 @@ noremap <silent> <leader>np :sp %:p:h<CR>
 
 "------ Windows {
 
-" Maps to make handling tabs a bit easier
+" Maps to make handling tabs easier
 nnoremap <silent> <leader>t :tabnext<cr>
 nnoremap <silent> <leader>T :tabprevious<cr>
 noremap <silent> <leader>nt :tabe<cr>
 
-" Maps to make handling windows a bit easier
+" Maps to make handling windows a lot easier
 noremap <silent> <leader>l <C-W>l
 noremap <silent> <leader>k <C-W>k
 noremap <silent> <leader>h <C-W>h
@@ -201,14 +213,13 @@ noremap <silent> <leader>cj :wincmd j<CR>:close<CR>
 noremap <silent> <leader>ck :wincmd k<CR>:close<CR>
 noremap <silent> <leader>ch :wincmd h<CR>:close<CR>
 noremap <silent> <leader>cl :wincmd l<CR>:close<CR>
-noremap <silent> <leader>cc :close<CR>
-noremap <silent> <leader>cw :cclose<CR>
-noremap <silent> <leader>ct :tabc<CR>
+noremap <silent> <leader>wc :close<CR>
+noremap <silent> <leader>wt :tabc<CR>
 noremap <silent> <leader>wL <C-W>L
 noremap <silent> <leader>wK <C-W>K
 noremap <silent> <leader>wH <C-W>H
 noremap <silent> <leader>wJ <C-W>J
-noremap <silent> <leader>w\| 103<C-W>\|
+noremap <silent> <leader>w\| 83<C-W>\|
 noremap <silent> <leader>w_ <C-W>_
 noremap <silent> <leader>w= <C-W>=
 noremap <silent> <leader>w< <C-W><
@@ -239,6 +250,10 @@ nmap <silent> <leader>nh :nohls<CR>
 noremap <leader>ww :set wrap!<cr>
 
 "------ Control }
+
+"------ Google {
+nnoremap <leader>cs :execute ":!google-chrome --new-window https://cs.corp.google.com\\#%:p:s?.*./google3/?google3/?\\&l=" . line('.')<CR> <CR>
+"------ Google }
 
 "----Mappings }
 
