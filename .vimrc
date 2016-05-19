@@ -248,6 +248,8 @@ noremap <silent> <leader>p :set invpaste<CR>:set paste?<CR>
 
 " Turn off highlighted search
 nmap <silent> <leader>nh :nohls<CR>
+" Search selected text
+vnoremap * y/<C-r>"<CR>
 
 " Toggle word wrap
 noremap <leader>ww :set wrap!<cr>
@@ -255,7 +257,8 @@ noremap <leader>ww :set wrap!<cr>
 "------ Control }
 
 "------ Google {
-nnoremap <unique> <leader>cs :CorpWebCs<Space>
+nnoremap <leader>cs :CorpWebCs<Space>
+noremap <silent> <leader>m :MruWindow<CR>
 "------ Google }
 
 "----Mappings }
