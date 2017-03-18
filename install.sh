@@ -10,6 +10,8 @@ popd
 
 echo linking .bashrc
 ln -s $DIR/.bashrc ~/.bashrc
+echo linking .gitconfig
+ln -s $DIR/.gitconfig ~/.gitconfig
 echo linking .vimrc
 ln -s $DIR/.vimrc ~/.vimrc
 echo linking .vim
@@ -18,13 +20,11 @@ mkdir $DIR/.vim/tmp $DIR/.vim/backup
 echo installing plugins
 echo $(vim +PluginInstall +qall >/dev/null && echo success || echo failure)
 
-echo linking .xmonad
-ln -s $DIR/.xmonad ~/.xmonad
-
 echo linking zshrc
 ln -s $DIR/.zshrc ~/.zshrc
 echo linking oh-my-zsh
 ln -s $DIR/.oh-my-zsh ~/.oh-my-zsh
 echo attempting to change shell
 chsh -s `which zsh`
+
 
