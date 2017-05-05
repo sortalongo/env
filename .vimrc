@@ -222,7 +222,8 @@ noremap <silent> <leader>wL <C-W>L
 noremap <silent> <leader>wK <C-W>K
 noremap <silent> <leader>wH <C-W>H
 noremap <silent> <leader>wJ <C-W>J
-noremap <silent> <leader>w\| 83<C-W>\|
+noremap <silent> <leader>w\| <C-W>\|
+noremap <silent> <leader>w\\ 83<C-W>\|
 noremap <silent> <leader>w_ <C-W>_
 noremap <silent> <leader>w= <C-W>=
 noremap <silent> <leader>w< <C-W><
