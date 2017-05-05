@@ -13,6 +13,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'rust-lang/rust.vim'
+let g:rustfmt_autosave = 1
+autocmd BufNewFile,BufRead *.styl set filetype=stylus
+
 " Keep Plugin commands between vundle#begin/end.
 " Ensure plugin on GitHub repo
 
@@ -97,7 +101,7 @@ filetype plugin indent on    " required
 
 " colors
 set t_Co=256
-colorscheme badwolf
+colorscheme molokai
 
 " Turn on that syntax highlighting
 syntax on
