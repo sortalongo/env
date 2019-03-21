@@ -16,7 +16,7 @@ echo linking .vimrc
 ln -s $DIR/.vimrc ~/.vimrc
 echo linking .vim
 ln -s $DIR/.vim ~/.vim
-mkdir $DIR/.vim/tmp $DIR/.vim/backup
+mkdir -p $DIR/.vim/tmp $DIR/.vim/backup
 echo installing plugins
 echo $(vim +PluginInstall +qall >/dev/null && echo success || echo failure)
 
