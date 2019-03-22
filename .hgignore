@@ -1,0 +1,8 @@
+syntax:glob
+.*
+*.xcodeproj
+*.pyc
+bazel-*
+blaze-*
+tulsi-*
+tulsigen-*

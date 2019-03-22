@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Do this from outside of ~/env
+
 DIR=$(dirname ${BASH_SOURCE[0]})
 
 pushd $DIR
@@ -12,6 +14,8 @@ echo linking .bashrc
 ln -s $DIR/.bashrc ~/.bashrc
 echo linking .gitconfig
 ln -s $DIR/.gitconfig ~/.gitconfig
+echo linking .hgignore
+ln -s $DIR/.hgignore ~/.hgignore
 echo linking .vimrc
 ln -s $DIR/.vimrc ~/.vimrc
 echo linking .vim
