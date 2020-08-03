@@ -10,7 +10,7 @@
 [alias]
 	a = add --all
 	ai = add -i
-  b = branch --sort=-committerdate --format='%(color:green)%(committerdate:relative)%(color:reset):  %(refname:short)'
+  b = branch -vv --sort=-committerdate --format='%(color:green)%(committerdate:relative)%(color:reset):  %(refname:short) %(if) %(upstream) %(then)↑ %(upstream:short) %(end)'
 	c = commit
 	ca = commit -a
 	cm = commit -m
@@ -31,3 +31,5 @@
 	s = status
 [branch]
 	autosetuprebase = always
+[push]
+  default = upstream
