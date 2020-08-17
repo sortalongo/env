@@ -29,7 +29,5 @@
 	o = checkout
 	ob = checkout -b
 	s = status
-[branch]
-	autosetuprebase = always
 [push]
   default = upstream
