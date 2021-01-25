@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
  	name = Dan Sotolongo
- 	email = dsotolongo@google.com
+ 	email = dan.sotolongo@snowflake.com
 [core]
 	editor = vim
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
