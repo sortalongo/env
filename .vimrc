@@ -168,9 +168,6 @@ set autoread
 " Always show statusbar
 set laststatus=2
 
-" Remove any trailing whitespace that is in the file
-autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
-
 " Don't highlight matching parens
 let loaded_matchparen = 1
 
