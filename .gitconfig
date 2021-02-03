@@ -28,6 +28,8 @@
 	log = log --color
 	o = checkout
 	ob = checkout -b
+  pm = pull origin master
+  pu = push origin -u HEAD
 	s = status
 [push]
   default = upstream
